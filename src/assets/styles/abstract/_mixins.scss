@@ -1,0 +1,37 @@
+@use "sass:map";
+@use 'breakpoints' as b;
+
+// Purpose: Creates a media query for a given breakpoint size.
+//
+// Parameters:
+// - $size: The key for the desired breakpoint size from the $breakpoints map.
+//
+// Return: Outputs a media query with a minimum width for the specified breakpoint.
+@mixin breakpoint($size) {
+  @media (min-width: map.get(b.$breakpoints, $size)) {
+    @content
+  }
+}
+
+
+// Purpose: Sets the grid area for the child elements within a grid container and generates the corresponding
+// grid-template-areas property.
+//
+// Parameters:
+// - $areas: A list of grid area names.
+//
+// Return: Assigns grid-area properties to the nth-child elements of the container. Generates the
+// grid-template-areas property, arranging each area name in a new line.
+@mixin set-grid-areas($areas...) {
+  $count: 1;
+  $grid-template: '';
+
+  @each $area in $areas {
+    & > :nth-child(#{$count}) {
+      grid-area: #{$area};
+    }
+    $grid-template: '#{$grid-template} \'#{$area}\'';
+    $count: $count + 1;
+  }
+  grid-template-areas: #{$grid-template};
+}

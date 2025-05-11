@@ -1,0 +1,39 @@
+@use "../abstract" as a;
+
+.grid-bleed {
+  display               : grid;
+  grid-template-columns : 1fr calc(100% - 1.5rem * 2) 1fr;
+
+  @include a.breakpoint(small) {
+    grid-template-columns : 1fr calc(100% - 2.5rem * 2) 1fr;
+  }
+
+  @include a.breakpoint(medium) {
+    grid-template-columns : 1fr calc(100% - 3rem * 2) 1fr;
+  }
+
+  @include a.breakpoint(large) {
+    grid-template-columns : 1fr min(100% - 14rem * 2, 120rem) 1fr;
+  }
+
+  & > * {
+    grid-column : 2;
+  }
+}
+
+.grid-auto-fit {
+  &--sml {
+    display               : grid;
+    grid-template-columns : repeat(auto-fit, minmax(12rem, 1fr));
+  }
+
+  &--med {
+    display               : grid;
+    grid-template-columns : repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &--lrg {
+    display               : grid;
+    grid-template-columns : repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}

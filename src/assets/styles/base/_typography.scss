@@ -1,0 +1,62 @@
+@use "../abstract/index" as a;
+
+// Global Styles
+* {
+  font-family : "Rubik", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Heading Styles
+.heading-xl {}
+.heading-lg {}
+.heading-md {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.heading-sm {}
+.heading-xs {}
+
+// Text Styles
+.text-xl {}
+.text-lg {}
+
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.text-sm {}
+.text-xs {}
+
+// Misc. Styles
+.header-link {}
+
+.link {}
+
+// Font Weight
+.bold {font-weight : 700;}
+.semi-bold {font-weight : 600;}
+.medium {font-weight : 500;}
+.normal {font-weight : 400;}
+.light {font-weight : 300;}
+
+// Font Style
+.italic {font-style : italic;}
+.normal {font-style : normal;}
+
+// Text Alignment
+.text-left {text-align : left;}
+.text-center {text-align : center;}
+.text-right {text-align : right;}
+
+// Text Transformation
+.uppercase {text-transform : uppercase;}
+.lowercase {text-transform : lowercase;}
+.capitalize {text-transform : capitalize;}

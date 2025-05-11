@@ -1,0 +1,33 @@
+.comment-actions {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.comment-action-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.15s;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr-purple-200;
+    }
+
+  &--purple {
+    color: $clr-purple-600;
+
+    &:hover {
+      color: $clr-purple-200;
+    }
+  }
+
+  &--pink {
+    color: $clr-pink-400;
+
+    &:hover {
+      color: $clr-pink-200;
+    }
+  }
+}

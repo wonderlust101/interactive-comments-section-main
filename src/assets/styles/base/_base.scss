@@ -1,0 +1,13 @@
+@use "../abstract/index" as a;
+
+textarea {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 0.1rem solid a.$clr-grey-50;
+  border-radius: 0.5rem;
+  resize: none;
+
+  &:focus {
+    outline: 1px solid a.$clr-purple-600;
+  }
+}
